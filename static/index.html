@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SensorNet Manager</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>SensorNet Manager</h1>
+            <div class="header-actions">
+                <div class="hub-info">
+                    <div class="hub-info-item">
+                        <span class="hub-info-label">Network</span>
+                        <span id="hub-ssid">—</span>
+                    </div>
+                    <div class="hub-info-item">
+                        <span class="hub-info-label">Hub IP</span>
+                        <span id="hub-ip">—</span>
+                    </div>
+                </div>
+                <button id="update-all-btn" class="btn" onclick="triggerAllOTA()">Update All</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="table-container">
+                <table id="nodes-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>IP Address</th>
+                            <th>Network</th>
+                            <th>Health</th>
+                            <th>Version</th>
+                            <th>Uptime</th>
+                            <th>Message</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="nodes-tbody">
+                        <tr>
+                            <td colspan="8" class="loading-cell">Loading nodes...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
